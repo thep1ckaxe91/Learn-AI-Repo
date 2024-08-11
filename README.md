@@ -1,6 +1,6 @@
 # Learn-AI-Repo
 
-# Night 1
+# Week 1
 
 Begin ML -> Cost function formula
 
@@ -15,21 +15,14 @@ Understandable
     + Classification : group the result, works when there's small group of result, predict discrete labels or categories
 
 
-- Unsupervised : training set is unlabelled, require to find pattern or...
+- Unsupervised : training set is unlabelled
+    
+    + Cluster
 
-
+Some conclusion:
+- Gradient Descent is powerful to find local min
+- Algo for each use case
 
 # Week 2
 
-- Some conclusion:
-    + Gradient Descent:
-        
-        Can use in all most every function
-        
-            tmp_w = w_i - a * d(cost_w1-n,b)/d(w_i)
-            tmp_b = b_i - a * d(cost_w1-n,b)/d(b_i)
-
-        with:
-
-            a : learning rate
-            w_i, b : cost func param
+Understanding LR with multiple features
