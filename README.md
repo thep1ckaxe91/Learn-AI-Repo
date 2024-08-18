@@ -25,4 +25,12 @@ Some conclusion:
 
 # Week 2
 
-Understanding LR with multiple features
+- Understanding LiR with multiple features
+- Vectorize with numpy help utilize hardware acc
+- Feature scaling is necessary when the value is way to large or too small compare to other feature
+- Feature Engineer help form the shape of the graph to be more fit in the training set
+- Poly Reg is not much diff
+
+# Week 3
+
+Cooking
