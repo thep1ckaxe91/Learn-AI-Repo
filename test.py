@@ -1,4 +1,6 @@
-from PIL import Image
-img = Image.open('image.png')
-gray = img.convert('L')
-gray.show()
+import numpy as np
+
+
+w = np.random.randn(28)
+
+w = w.reshape(4,7)
