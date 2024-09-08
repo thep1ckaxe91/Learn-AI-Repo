@@ -70,4 +70,4 @@ X = n x m , Y = 1 x m
     + Ex: (3,4) (1,4) -> valid, (3, 4) (1,2) -> nuh uh
     + Allowed: (3,4) {operator} *a number: (3,4) * 2 -> every element is doubled
 
-- 
+- Attending Lab for log reg to specify if cat or not (accidentally delete code, cant recover, need help)
