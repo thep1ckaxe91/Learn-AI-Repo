@@ -52,9 +52,20 @@ $$
     + Get more training batch
     + choose which feature is most relevant (feature selection)
 - Regularization in cost function (linear) and apply with GD: 
-    ![alt text](image.png)
 
-logistic make not much difference
+    $$
+    \min_{\vec{w},b} J(\vec{w},b)=\min_{\vec{w},b}({1\over2m}\sum_{i=1}^{m}(f_{\vec{w},b}({\vec{x}}^{(i)})-y^{(i)})^2+{\lambda\over2m}\sum_{j=1}^{n}w_j^2)
+    $$
+    Gradient Descent
+    
+    repeat $j=1 \rightarrow n$ {
+        $$
+        w_j = w_j - \alpha*{\delta{J(\vec{w},b)}\over{\delta{w_j}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})x_j^{(i)}+{\lambda\over{m}}w_j \\
+        b = b - \alpha*{\delta{J(\vec{w},b)}\over{\delta{b}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})\\
+        $$
+    }
+
+logistic make not much difference, only the diff is the f function
 
 
 # Neural Network and Deep Learning
@@ -79,7 +90,7 @@ X = n x m , Y = 1 x m
 - Lab done, working on week3
 
 ## Week 3
-Neural network representation:
+### Neural network representation:
 $X_{1}^{[2](3)}$ means the $1^{st}$ features (or node, count from 1) in $2^{nd}$ layers in the $3^{rd}$ examples
 
 Call $X = [x^{(1)},x^{(2)},...,x^{(m)}]$ with $x^{(i)}$ mean the input layer in the i example
@@ -98,9 +109,42 @@ A^{[2]} = \sigma(Z^{[2]}) \\
 ... \\
 Z^{[m]} = W^{[2]}A^{[m-1]}+b^{[m]} \\
 A^{[m]} = \sigma(Z^{[m]}) \\
+
+L(A^{[m]},Y)=...
 $$
 
-Sigmoid activation function can also be replace with __tanh__ function, or __RELU__, try them all to see which fit best
+### About activation function
+
+Sigmoid activation function can also be replace with __tanh__ function, or __ReLU__, try them all to see which fit best
 
 Each layer might have their own activation function, for ex, layer 1 use sigmoid, layer 2 use relu, ....
 
+Derivative of activation function:
+
+$$
+Sigmoid:\\
+\sigma(z)=a\\
+\sigma'(z)=a(1-a)\\
+$$
+$$
+Tanh:\\
+\tanh(z)=a\\
+\tanh'(z)=1-a^2\\
+$$
+$$
+ReLU (Leaky):\\
+p \in [0,1), \text{0 if ReLU}\\
+ReLU(z) = max(p*z,z)\\
+ReLU'(z) = 
+\begin{cases}
+p & \text{if } z < 0\\
+1 & \text{if } z \ge 0\\
+\end{cases}
+$$
+
+### Gradient Descent for NN
+With:
+
+Param: $ w^{[1]}, b^{[1]}, ... , w^{[k]} $
+
+Repeat $  $
