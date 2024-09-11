@@ -38,7 +38,12 @@ Some conclusion:
 - Decision boundary is a threshold that if exceed, it may raise as positive
 - Lost function for logistic reg is:
 
-![Logistic cost](logistic_cost.png)
+$$
+\begin{cases}
+-\log(f_{w,b}(\vec{x}^{(i)})) & \text{if } y^{(i)} = 1 \\
+-\log(1 - f_{w,b}(\vec{x}^{(i)})) & \text{if } y^{(i)} = 0
+\end{cases}
+$$
 
 - Simplify above equation is quite ez
 - Over/Under fitting is situation when the model fit too well/too bad with the training set, often happen when there're too many feature
@@ -71,4 +76,31 @@ X = n x m , Y = 1 x m
     + Allowed: (3,4) {operator} *a number: (3,4) * 2 -> every element is doubled
 
 - Attending lab, very interesting, looking to make this from scratch with cuda c/c++
-- FIXME: some how w cant reshape (faulty X?)
+- Lab done, working on week3
+
+## Week 3
+Neural network representation:
+$X_{1}^{[2](3)}$ means the $1^{st}$ features (or node, count from 1) in $2^{nd}$ layers in the $3^{rd}$ examples
+
+Call $X = [x^{(1)},x^{(2)},...,x^{(m)}]$ with $x^{(i)}$ mean the input layer in the i example
+
+Call $A^{[1]} = [a^{[1](1)},a^{[1](2)},...,a^{[1](m)}]$ mean the $1^{st}$ hidden layer and in each example from 1->m
+
+the rest may apply the same, and consider $X = A^{[0]}$
+
+We can vectorize the computation to:
+
+$$
+Z^{[1]} = W^{[1]}A^{[0]}+b^{[1]} \\
+A^{[1]} = \sigma(Z^{[1]}) \\
+Z^{[2]} = W^{[2]}A^{[1]}+b^{[2]} \\
+A^{[2]} = \sigma(Z^{[2]}) \\
+... \\
+Z^{[m]} = W^{[2]}A^{[m-1]}+b^{[m]} \\
+A^{[m]} = \sigma(Z^{[m]}) \\
+$$
+
+Sigmoid activation function can also be replace with __tanh__ function, or __RELU__, try them all to see which fit best
+
+Each layer might have their own activation function, for ex, layer 1 use sigmoid, layer 2 use relu, ....
+
