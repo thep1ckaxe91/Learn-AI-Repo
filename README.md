@@ -37,13 +37,13 @@ Some conclusion:
 - Lost function for logistic reg is:
 
 $$
-`
+
 \begin{cases}
 -\log(f_{w,b}(\vec{x}^{(i)})) & \text{if } y^{(i)} = 1 \\
 -\log(1 - f_{w,b}(\vec{x}^{(i)})) & \text{if } y^{(i)} = 0
 \end{cases}
-`
-$$
+
+$$1
 
 - Simplify above equation is quite ez
 - Over/Under fitting is situation when the model fit too well/too bad with the training set, often happen when there're too many feature
@@ -137,22 +137,36 @@ Each layer might have their own activation function, for ex, layer 1 use sigmoid
 
 Derivative of activation function:
 
+$$  
+Sigmoid:
 $$
-Sigmoid:\\
-\sigma(z)=a\\
-\sigma'(z)=a(1-a)\\
+$$
+\sigma(z)=a
+$$
+$$
+\sigma'(z)=a(1-a)
 $$
 
 $$
-Tanh:\\
-\tanh(z)=a\\
-\tanh'(z)=1-a^2\\
+Tanh:
+$$
+$$
+\tanh(z)=a
+$$
+$$
+\tanh'(z)=1-a^2
 $$
 
 $$
 ReLU (Leaky):\\
+$$
+$$
 p \in [0,1), \text{0 if ReLU}\\
+$$
+$$
 ReLU(z) = max(p*z,z)\\
+$$
+$$
 ReLU'(z) =
 \begin{cases}
 p & \text{if } z < 0\\
