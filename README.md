@@ -112,7 +112,7 @@ the rest may apply the same, and consider $`X = A^{[0]}`$
 
 We can vectorize the computation to:
 
-$$`
+$$
 Z^{[1]} = W^{[1]}A^{[0]}+b^{[1]} \\
 A^{[1]} = \sigma(Z^{[1]}) \\
 Z^{[2]} = W^{[2]}A^{[1]}+b^{[2]} \\
@@ -122,7 +122,7 @@ Z^{[m]} = W^{[2]}A^{[m-1]}+b^{[m]} \\
 A^{[m]} = \sigma(Z^{[m]}) \\
 
 L(A^{[m]},Y)=...
-`$$
+$$
 
 ### About activation function and its derivative
 
@@ -132,19 +132,19 @@ Each layer might have their own activation function, for ex, layer 1 use sigmoid
 
 Derivative of activation function:
 
-$$`
+$$
 Sigmoid:\\
 \sigma(z)=a\\
 \sigma'(z)=a(1-a)\\
-`$$
+$$
 
-$$`
+$$
 Tanh:\\
 \tanh(z)=a\\
 \tanh'(z)=1-a^2\\
-`$$
+$$
 
-$$`
+$$
 ReLU (Leaky):\\
 p \in [0,1), \text{0 if ReLU}\\
 ReLU(z) = max(p*z,z)\\
@@ -153,7 +153,7 @@ ReLU'(z) =
 p & \text{if } z < 0\\
 1 & \text{if } z \ge 0\\
 \end{cases}
-`$$
+$$
 
 ### Gradient Descent for NN
 
