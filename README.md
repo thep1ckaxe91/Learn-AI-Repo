@@ -140,9 +140,11 @@ Derivative of activation function:
 $`
 Sigmoid:
 `$
+
 $`
 \sigma(z)=a
 `$
+
 $`
 \sigma'(z)=a(1-a)
 `$
@@ -150,9 +152,11 @@ $`
 $`
 Tanh:
 `$
+
 $`
 \tanh(z)=a
 `$
+
 $`
 \tanh'(z)=1-a^2
 `$
