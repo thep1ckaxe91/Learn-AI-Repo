@@ -36,12 +36,14 @@ Some conclusion:
 - Decision boundary is a threshold that if exceed, it may raise as positive
 - Lost function for logistic reg is:
 
-$$`
+$$
+`
 \begin{cases}
 -\log(f_{w,b}(\vec{x}^{(i)})) & \text{if } y^{(i)} = 1 \\
 -\log(1 - f_{w,b}(\vec{x}^{(i)})) & \text{if } y^{(i)} = 0
 \end{cases}
-`$$
+`
+$$
 
 - Simplify above equation is quite ez
 - Over/Under fitting is situation when the model fit too well/too bad with the training set, often happen when there're too many feature
@@ -51,17 +53,24 @@ $$`
   - choose which feature is most relevant (feature selection)
 - Regularization in cost function (linear) and apply with GD:
 
-  $$`
+  $$
+  `
   \min_{\vec{w},b} J(\vec{w},b)=\min_{\vec{w},b}({1\over2m}\sum_{i=1}^{m}(f_{\vec{w},b}({\vec{x}}^{(i)})-y^{(i)})^2+{\lambda\over2m}\sum_{j=1}^{n}w_j^2)
-  `$$
+  `
+  $$
 
   Gradient Descent
 
-  repeat $j=1 \rightarrow n$ {
-  $`
-        w_j = w_j - \alpha*{\delta{J(\vec{w},b)}\over{\delta{w_j}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})x_j^{(i)}+{\lambda\over{m}}w_j \\
-        b = b - \alpha*{\delta{J(\vec{w},b)}\over{\delta{b}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})\\
-        `$
+  repeat $j=1 \rightarrow n$ 
+  
+  {\
+    $`
+        w_j = w_j - \alpha*{\delta{J(\vec{w},b)}\over{\delta{w_j}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})x_j^{(i)}+{\lambda\over{m}}w_j 
+    $
+
+    $`
+        b = b - \alpha*{\delta{J(\vec{w},b)}\over{\delta{b}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})
+    `$\
   }
 
 logistic make not much difference, only the diff is the f function
@@ -105,7 +114,8 @@ the rest may apply the same, and consider $`X = A^{[0]}`$
 
 We can vectorize the computation to:
 
-$$`
+$$
+`
 Z^{[1]} = W^{[1]}A^{[0]}+b^{[1]} \\
 A^{[1]} = \sigma(Z^{[1]}) \\
 Z^{[2]} = W^{[2]}A^{[1]}+b^{[2]} \\
@@ -115,7 +125,8 @@ Z^{[m]} = W^{[2]}A^{[m-1]}+b^{[m]} \\
 A^{[m]} = \sigma(Z^{[m]}) \\
 
 L(A^{[m]},Y)=...
-`$$
+`
+$$
 
 ### About activation function and its derivative
 
@@ -125,19 +136,24 @@ Each layer might have their own activation function, for ex, layer 1 use sigmoid
 
 Derivative of activation function:
 
-$$`
+$$
+`
 Sigmoid:\\
 \sigma(z)=a\\
 \sigma'(z)=a(1-a)\\
-`$$
+`
+$$
 
-$$`
+$$
+`
 Tanh:\\
 \tanh(z)=a\\
 \tanh'(z)=1-a^2\\
-`$$
+`
+$$
 
-$$`
+$$
+`
 ReLU (Leaky):\\
 p \in [0,1), \text{0 if ReLU}\\
 ReLU(z) = max(p*z,z)\\
@@ -146,7 +162,8 @@ ReLU'(z) =
 p & \text{if } z < 0\\
 1 & \text{if } z \ge 0\\
 \end{cases}
-`$$
+`
+$$
 
 ### Gradient Descent for NN
 
