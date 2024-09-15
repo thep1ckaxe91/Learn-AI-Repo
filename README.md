@@ -59,11 +59,11 @@ $$1
 
   Gradient Descent
 
-  repeat $j=1 \rightarrow n$ 
-  
+  repeat $j=1 \rightarrow n$
+
   {\
     $`
-        w_j = w_j - \alpha*{\delta{J(\vec{w},b)}\over{\delta{w_j}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})x_j^{(i)}+{\lambda\over{m}}w_j 
+        w_j = w_j - \alpha*{\delta{J(\vec{w},b)}\over{\delta{w_j}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})x_j^{(i)}+{\lambda\over{m}}w_j
     $
 
     $`
@@ -137,42 +137,42 @@ Each layer might have their own activation function, for ex, layer 1 use sigmoid
 
 Derivative of activation function:
 
-$$  
+$`
 Sigmoid:
-$$
-$$
+`$
+$`
 \sigma(z)=a
-$$
-$$
+`$
+$`
 \sigma'(z)=a(1-a)
-$$
+`$
 
-$$
+$`
 Tanh:
-$$
-$$
+`$
+$`
 \tanh(z)=a
-$$
-$$
+`$
+$`
 \tanh'(z)=1-a^2
-$$
+`$
 
-$$
+$`
 ReLU (Leaky):\\
-$$
-$$
+`$
+$`
 p \in [0,1), \text{0 if ReLU}\\
-$$
-$$
+`$
+$`
 ReLU(z) = max(p*z,z)\\
-$$
-$$
+`$
+$`
 ReLU'(z) =
 \begin{cases}
 p & \text{if } z < 0\\
 1 & \text{if } z \ge 0\\
 \end{cases}
-$$
+`$
 
 ### Gradient Descent for NN
 
@@ -181,3 +181,4 @@ With:
 Param: $` w^{[1]}, b^{[1]}, ... , w^{[k]} `$
 
 Repeat $ $
+$$
