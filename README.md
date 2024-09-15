@@ -58,10 +58,10 @@ $$`
   Gradient Descent
 
   repeat $j=1 \rightarrow n$ {
-  $$`
+  $`
         w_j = w_j - \alpha*{\delta{J(\vec{w},b)}\over{\delta{w_j}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})x_j^{(i)}+{\lambda\over{m}}w_j \\
         b = b - \alpha*{\delta{J(\vec{w},b)}\over{\delta{b}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})\\
-        `$$
+        `$
   }
 
 logistic make not much difference, only the diff is the f function
