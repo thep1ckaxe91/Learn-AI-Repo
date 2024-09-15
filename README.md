@@ -158,14 +158,17 @@ $`
 `$
 
 $`
-ReLU (Leaky):\\
+ReLU (Leaky):
 `$
+
 $`
 p \in [0,1), \text{0 if ReLU}\\
 `$
+
 $`
 ReLU(z) = max(p*z,z)\\
 `$
+
 $`
 ReLU'(z) =
 \begin{cases}
