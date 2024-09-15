@@ -36,12 +36,12 @@ Some conclusion:
 - Decision boundary is a threshold that if exceed, it may raise as positive
 - Lost function for logistic reg is:
 
-$$
+$$`
 \begin{cases}
 -\log(f_{w,b}(\vec{x}^{(i)})) & \text{if } y^{(i)} = 1 \\
 -\log(1 - f_{w,b}(\vec{x}^{(i)})) & \text{if } y^{(i)} = 0
 \end{cases}
-$$
+`$$
 
 - Simplify above equation is quite ez
 - Over/Under fitting is situation when the model fit too well/too bad with the training set, often happen when there're too many feature
@@ -51,9 +51,9 @@ $$
   - choose which feature is most relevant (feature selection)
 - Regularization in cost function (linear) and apply with GD:
 
-  $$
+  $$`
   \min_{\vec{w},b} J(\vec{w},b)=\min_{\vec{w},b}({1\over2m}\sum_{i=1}^{m}(f_{\vec{w},b}({\vec{x}}^{(i)})-y^{(i)})^2+{\lambda\over2m}\sum_{j=1}^{n}w_j^2)
-  $$
+  `$$
 
   Gradient Descent
 
@@ -95,9 +95,9 @@ X = n x m , Y = 1 x m
 
 ### Neural network representation:
 
-$X_{1}^{[2](3)}$ means the $1^{st}$ features (or node, count from 1) in $2^{nd}$ layers in the $3^{rd}$ examples
+$`X_{1}^{[2](3)}`$ means the $`1^{st}`$ features (or node, count from 1) in $`2^{nd}`$ layers in the $`3^{rd}`$ examples
 
-Call $`X = [x^{(1)},x^{(2)},...,x^{(m)}]$ with $x^{(i)}`$ mean the input layer in the i example
+Call $`X = [x^{(1)},x^{(2)},...,x^{(m)}]`$ with $`x^{(i)}`$ mean the input layer in the i example
 
 Call $`A^{[1]} = [a^{[1](1)},a^{[1](2)},...,a^{[1](m)}]`$ mean the $1^{st}$ hidden layer and in each example from 1->m
 
