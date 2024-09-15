@@ -58,10 +58,10 @@ $$`
   Gradient Descent
 
   repeat $j=1 \rightarrow n$ {
-  $$
+  $$`
         w_j = w_j - \alpha*{\delta{J(\vec{w},b)}\over{\delta{w_j}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})x_j^{(i)}+{\lambda\over{m}}w_j \\
         b = b - \alpha*{\delta{J(\vec{w},b)}\over{\delta{b}}}={1\over{m}}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)})-y^{(i)})\\
-        $$
+        `$$
   }
 
 logistic make not much difference, only the diff is the f function
@@ -99,13 +99,13 @@ $`X_{1}^{[2](3)}`$ means the $`1^{st}`$ features (or node, count from 1) in $`2^
 
 Call $`X = [x^{(1)},x^{(2)},...,x^{(m)}]`$ with $`x^{(i)}`$ mean the input layer in the i example
 
-Call $`A^{[1]} = [a^{[1](1)},a^{[1](2)},...,a^{[1](m)}]`$ mean the $1^{st}$ hidden layer and in each example from 1->m
+Call $`A^{[1]} = [a^{[1](1)},a^{[1](2)},...,a^{[1](m)}]`$ mean the $`1^{st}`$ hidden layer and in each example from 1->m
 
-the rest may apply the same, and consider $X = A^{[0]}$
+the rest may apply the same, and consider $`X = A^{[0]}`$
 
 We can vectorize the computation to:
 
-$$
+$$`
 Z^{[1]} = W^{[1]}A^{[0]}+b^{[1]} \\
 A^{[1]} = \sigma(Z^{[1]}) \\
 Z^{[2]} = W^{[2]}A^{[1]}+b^{[2]} \\
@@ -115,7 +115,7 @@ Z^{[m]} = W^{[2]}A^{[m-1]}+b^{[m]} \\
 A^{[m]} = \sigma(Z^{[m]}) \\
 
 L(A^{[m]},Y)=...
-$$
+`$$
 
 ### About activation function and its derivative
 
@@ -125,19 +125,19 @@ Each layer might have their own activation function, for ex, layer 1 use sigmoid
 
 Derivative of activation function:
 
-$$
+$$`
 Sigmoid:\\
 \sigma(z)=a\\
 \sigma'(z)=a(1-a)\\
-$$
+`$$
 
-$$
+$$`
 Tanh:\\
 \tanh(z)=a\\
 \tanh'(z)=1-a^2\\
-$$
+`$$
 
-$$
+$$`
 ReLU (Leaky):\\
 p \in [0,1), \text{0 if ReLU}\\
 ReLU(z) = max(p*z,z)\\
@@ -146,12 +146,12 @@ ReLU'(z) =
 p & \text{if } z < 0\\
 1 & \text{if } z \ge 0\\
 \end{cases}
-$$
+`$$
 
 ### Gradient Descent for NN
 
 With:
 
-Param: $ w^{[1]}, b^{[1]}, ... , w^{[k]} $
+Param: $` w^{[1]}, b^{[1]}, ... , w^{[k]} `$
 
 Repeat $ $
