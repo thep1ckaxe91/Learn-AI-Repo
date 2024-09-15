@@ -53,11 +53,11 @@ $$
   - choose which feature is most relevant (feature selection)
 - Regularization in cost function (linear) and apply with GD:
 
-  $$
+  $
   `
   \min_{\vec{w},b} J(\vec{w},b)=\min_{\vec{w},b}({1\over2m}\sum_{i=1}^{m}(f_{\vec{w},b}({\vec{x}}^{(i)})-y^{(i)})^2+{\lambda\over2m}\sum_{j=1}^{n}w_j^2)
   `
-  $$
+  $
 
   Gradient Descent
 
